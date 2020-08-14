@@ -1,0 +1,46 @@
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\bin\Debug\Sistema_FotoStudio.exe.config
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\bin\Debug\Sistema_FotoStudio.exe
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\bin\Debug\Sistema_FotoStudio.pdb
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.frmBase.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.Properties.Resources.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroCliente.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroProduto.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPrincipal.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.GenerateResource.cache
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.exe
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.pdb
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroFornedor.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmLogin.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroFuncionario.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaFornecedor.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaFuncionario.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroServico.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmDependentes.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisarCliente.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisarDependentes.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisarProduto.resources
+C:\Users\Kalyston\Documents\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaServico.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\bin\Debug\Sistema_FotoStudio.exe.config
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\bin\Debug\Sistema_FotoStudio.exe
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\bin\Debug\Sistema_FotoStudio.pdb
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csprojAssemblyReference.cache
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.frmBase.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.Properties.Resources.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroCliente.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroFuncionario.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroProduto.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroServico.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmDependentes.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmLogin.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaFornecedor.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaFuncionario.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisarCliente.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisarDependentes.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisarProduto.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaServico.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPrincipal.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroFornedor.resources
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.GenerateResource.cache
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.CoreCompileInputs.cache
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.exe
+C:\Users\Wallas Marcelo\Documents\Unifafibe\8 Semestre\Estagio Supervisionado II\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.pdb
