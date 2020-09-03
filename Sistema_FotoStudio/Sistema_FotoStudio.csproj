@@ -50,6 +50,9 @@
     <Compile Include="BotaoCircular.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controller\BuscaCEPController.cs" />
+    <Compile Include="Model\BuscaCEP.cs" />
+    <Compile Include="Model\CEP.cs" />
     <Compile Include="View\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,9 +213,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

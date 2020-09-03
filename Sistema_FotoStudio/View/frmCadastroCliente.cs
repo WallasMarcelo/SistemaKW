@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_FotoStudio.Model;
+using Sistema_FotoStudio.Controller;
 
 namespace Sistema_FotoStudio.View
 {
@@ -142,99 +144,28 @@ namespace Sistema_FotoStudio.View
             }
         }
 
-        private void mskCEP_Leave(object sender, EventArgs e)
+
+
+        private void mskCEP_Leave_1(object sender, EventArgs e)
         {
-            try
+            if (this.cep.Length < 8 || this.cep.Length > 9)
             {
-                string CEP = mskCEP.Text;
-
-                if (CEP.Length < 8 || CEP.Length > 9)
-                {
-                    MessageBox.Show("Informe um CEP válido!");
-                    return;
-                }
-
-
-                System.Net.HttpWebRequest requisicao = (System.Net.HttpWebRequest)System.Net.WebRequest.Create("https://viacep.com.br/ws/" + CEP + "/json/");
-
-                requisicao.AllowAutoRedirect = false;
-                System.Net.HttpWebResponse ChecaServidor = (System.Net.HttpWebResponse)requisicao.GetResponse();
-
-                if (ChecaServidor.StatusCode != System.Net.HttpStatusCode.OK)
-                {
-                    MessageBox.Show("Servidor indisponível");
-                    return;
-                }
-
-
-                using (Stream webStream = ChecaServidor.GetResponseStream())
-                {
-                    if (webStream != null)
-                    {
-                        using (StreamReader responseReader = new StreamReader(webStream))
-                        {
-                            string response = responseReader.ReadToEnd();
-                            response = System.Text.RegularExpressions.Regex.Replace(response, "[{},]", string.Empty);
-                            response = response.Replace("\"", "");
-
-                            String[] substrings = response.Split('\n');
-
-                            int cont = 0;
-                            foreach (var substring in substrings)
-                            {
-                                if (cont == 1)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    if (valor[0] == "  erro")
-                                    {
-                                        MessageBox.Show("CEP não encontrado");
-                                        mskCEP.Focus();
-                                        return;
-                                    }
-                                }
-
-                                //Logradouro
-                                if (cont == 2)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtLogradouro.Text = valor[1];
-                                }
-
-                                //Bairro
-                                if (cont == 4)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtBairro.Text = valor[1];
-                                }
-
-                                //Localidade (Cidade)
-                                if (cont == 5)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    txtCidade.Text = valor[1];
-                                }
-
-                                //Estado (UF)
-                                if (cont == 6)
-                                {
-                                    string[] valor = substring.Split(":".ToCharArray());
-                                    cmbUF.SelectedItem = valor[1].Trim();
-                                }
-
-                                cont++;
-                            }
-                        }
-                    }
-                }
-
+                MessageBox.Show("Informe um CEP válido!");
             }
-            catch (Exception erro)
+            else
             {
-                MessageBox.Show("Algo deu errado. Detalhes: " + erro.Message);
+                BuscaCEPController controller = new BuscaCEPController();
+                CEP retCEP = controller.solicitarCEP(this.cep);
+
+                txtLogradouro.Text = retCEP.logradouro;
+                txtBairro.Text = retCEP.bairro;
+                txtCidade.Text = retCEP.cidade;
+                cmbUF.SelectedItem = retCEP.uf;
+
+
             }
         }
     }
-
 }
 
 

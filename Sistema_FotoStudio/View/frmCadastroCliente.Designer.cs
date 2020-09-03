@@ -310,7 +310,7 @@
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(152, 20);
             this.mskCEP.TabIndex = 11;
-            this.mskCEP.Leave += new System.EventHandler(this.mskCEP_Leave);
+            this.mskCEP.Leave += new System.EventHandler(this.mskCEP_Leave_1);
             // 
             // txtCidade
             // 
