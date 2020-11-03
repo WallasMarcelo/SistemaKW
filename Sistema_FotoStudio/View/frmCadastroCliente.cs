@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,9 +15,18 @@ namespace Sistema_FotoStudio.View
 {
     public partial class frmCadastroCliente : frmBase
     {
-        public frmCadastroCliente()
+        bool alterar = false;
+        frmPrincipal principal;
+        public frmCadastroCliente(frmPrincipal principal)
         {
             InitializeComponent();
+            Inativar();
+            this.principal = principal;
+
+            mskCPF.Enabled = true;
+            txtNome.Enabled = true;
+            txtCodigo.Enabled = true;
+            btnCancelar.Enabled = true;
         }
 
         public string codigo { get => txtCodigo.Text; set => txtCodigo.Text = value; }
@@ -61,7 +69,15 @@ namespace Sistema_FotoStudio.View
 
             set
             {
-                cmbSexo.SelectedIndex = cmbSexo.FindString(value);
+                if(value == "M")
+                {
+                    cmbSexo.SelectedIndex = cmbSexo.FindString("Masculino");
+                }
+                else
+                {
+
+                    cmbSexo.SelectedIndex = cmbSexo.FindString("Feminino");
+                }
             }
         }
         public string nome { get => txtNome.Text; set => txtNome.Text = value; }
@@ -164,6 +180,183 @@ namespace Sistema_FotoStudio.View
 
 
             }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            Ativar();
+            txtCodigo.Enabled = false;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if(nome == "" || sobrenome == "" || cpf == "" || cidade == "")
+            {
+                MessageBox.Show("Preencha os campos obrigatórios");
+            }
+            else
+            {
+                ClienteController controller = new ClienteController();
+
+                if(controller.cadastrar(cpf,rg,sexo,nome,sobrenome,dataNasc,logradouro,numero,bairro,uf,
+                cidade, cep, email, telefone, celular, alterar) == 0)
+                {
+                    MessageBox.Show("Cliente cadastrado com sucesso!");
+                    Inativar();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar o cliente");
+                }
+            }
+            
+        }
+
+        protected void Inativar()
+        {
+            txtCodigo.Enabled = false;
+            txtNome.Enabled = false;
+            txtSobrenome.Enabled = false;
+            txtLogradouro.Enabled = false;
+            txtBairro.Enabled = false;
+            txtNumero.Enabled = false;
+            txtCidade.Enabled = false;
+            txtEmail.Enabled = false;
+            txtCodigo.Enabled = false;
+            mskCPF.Enabled = false;
+            mskRG.Enabled = false;
+            mskCEP.Enabled = false;
+            mskTelefone.Enabled = false;
+            mskCelular.Enabled = false;
+            cmbSexo.Enabled = false;
+            cmbUF.Enabled = false;
+            dtpDataNasc.Enabled = false;
+
+            btnAlterar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnDelete.Enabled = false;
+            alterar = false;
+
+
+        }
+
+        protected void Ativar()
+        {
+            txtNome.Enabled = true;
+            txtSobrenome.Enabled = true;
+            txtLogradouro.Enabled = true;
+            txtBairro.Enabled = true;
+            txtNumero.Enabled = true;
+            txtCidade.Enabled = true;
+            txtEmail.Enabled = true;
+            mskCPF.Enabled = true;
+            mskRG.Enabled = true;
+            mskCEP.Enabled = true;
+            mskTelefone.Enabled = true;
+            mskCelular.Enabled = true;
+            cmbSexo.Enabled = true;
+            cmbUF.Enabled = true;
+            dtpDataNasc.Enabled = true;
+
+            btnAlterar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSalvar.Enabled = true;
+
+        }
+
+        protected void Limpar()
+        {
+            txtNome.Text = "";
+            txtSobrenome.Text = "";
+            txtLogradouro.Text = "";
+            txtBairro.Text = "";
+            txtNumero.Text = "";
+            txtCidade.Text = "";
+            txtEmail.Text = "";
+            txtCodigo.Text = "";
+            mskCPF.Text = "";
+            mskRG.Text = "";
+            mskCEP.Text = "";
+            mskTelefone.Text = "";
+            mskCelular.Text = "";
+            cmbSexo.SelectedIndex = -1;
+            cmbUF.SelectedIndex = -1;
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+            Inativar();
+
+            mskCPF.Enabled = true;
+            txtNome.Enabled = true;
+            txtCodigo.Enabled = true;
+        }
+
+        private void frmCadastroCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            ClienteController clienteController = new ClienteController();
+
+
+            if (!codigo.Equals(""))
+            {
+                Cliente cliente = clienteController.PesquisarPorCodigo(codigo);
+
+                PassarValores(cliente);
+                return;
+
+            }
+
+
+            if (!cpf.Equals(""))
+            {
+                Cliente cliente = clienteController.PesquisarPorCPF(cpf);
+
+                PassarValores(cliente);
+                return;
+              
+            }
+
+           clienteController.PesquisarPorNome(nome,this,this.principal);
+
+        }
+
+
+        public void PassarValores(Cliente cliente)
+        {
+            txtNome.Text = cliente.Nome;
+            txtSobrenome.Text = cliente.Sobrenome;
+            txtLogradouro.Text = cliente.Logradouro;
+            txtNumero.Text = Convert.ToString(cliente.Numero);
+            txtBairro.Text = cliente.Bairro;
+            txtCidade.Text = cliente.Cidade;
+            txtEmail.Text = cliente.email;
+            mskCPF.Text = cliente.CPF;
+            mskCEP.Text = cliente.CEP;
+            mskRG.Text = cliente.RG;
+            mskTelefone.Text = cliente.telefone;
+            mskCelular.Text = cliente.celular;
+            sexo  = cliente.Sexo;
+            cmbUF.SelectedItem = cliente.UF;
+            dtpDataNasc.Value = cliente.Data_Nasc;
+
+            Inativar();
+            btnAlterar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnDelete.Enabled = true;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Ativar();
+            alterar = true;
         }
     }
 }

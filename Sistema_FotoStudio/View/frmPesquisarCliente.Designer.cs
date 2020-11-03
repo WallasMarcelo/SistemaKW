@@ -37,16 +37,10 @@
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dbLograduro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dbNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dbNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dbDataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dbRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridCliente = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,6 +86,7 @@
             this.btnPesquisarCliente.Size = new System.Drawing.Size(65, 42);
             this.btnPesquisarCliente.TabIndex = 2;
             this.btnPesquisarCliente.UseVisualStyleBackColor = false;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
             // 
             // txtNome
             // 
@@ -128,67 +123,25 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.DataGridCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(644, 236);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // DataGridCliente
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dbCPF,
-            this.dbLograduro,
-            this.dbNumero,
-            this.dbNome,
-            this.dbDataNasc,
-            this.dbRG});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 236);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // dbCPF
-            // 
-            this.dbCPF.HeaderText = "CPF";
-            this.dbCPF.Name = "dbCPF";
-            this.dbCPF.ReadOnly = true;
-            // 
-            // dbLograduro
-            // 
-            this.dbLograduro.HeaderText = "Lograduro";
-            this.dbLograduro.Name = "dbLograduro";
-            this.dbLograduro.ReadOnly = true;
-            // 
-            // dbNumero
-            // 
-            this.dbNumero.HeaderText = "Numero";
-            this.dbNumero.Name = "dbNumero";
-            this.dbNumero.ReadOnly = true;
-            // 
-            // dbNome
-            // 
-            this.dbNome.HeaderText = "Nome";
-            this.dbNome.Name = "dbNome";
-            this.dbNome.ReadOnly = true;
-            // 
-            // dbDataNasc
-            // 
-            this.dbDataNasc.HeaderText = "Data Nascimento";
-            this.dbDataNasc.Name = "dbDataNasc";
-            this.dbDataNasc.ReadOnly = true;
-            // 
-            // dbRG
-            // 
-            this.dbRG.HeaderText = "RG";
-            this.dbRG.Name = "dbRG";
-            this.dbRG.ReadOnly = true;
+            this.DataGridCliente.AllowUserToAddRows = false;
+            this.DataGridCliente.AllowUserToDeleteRows = false;
+            this.DataGridCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridCliente.Location = new System.Drawing.Point(0, 0);
+            this.DataGridCliente.Name = "DataGridCliente";
+            this.DataGridCliente.ReadOnly = true;
+            this.DataGridCliente.Size = new System.Drawing.Size(644, 236);
+            this.DataGridCliente.TabIndex = 5;
+            this.DataGridCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // frmPesquisarCliente
             // 
@@ -205,7 +158,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,12 +173,6 @@
         private System.Windows.Forms.MaskedTextBox mskCPF;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbCPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbLograduro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbNumero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbDataNasc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dbRG;
+        private System.Windows.Forms.DataGridView DataGridCliente;
     }
 }

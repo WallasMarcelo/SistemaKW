@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_FotoStudio.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,36 @@ namespace Sistema_FotoStudio.View
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            Nome = "";
+            CPF = "";
+
+            DataGridCliente.DataSource = null;
+            DataGridCliente.Rows.Clear();
+            DataGridCliente.Refresh();
+        }
+
+        private void btnPesquisarCliente_Click(object sender, EventArgs e)
+        {
+            pesquisaClienteController pesquisaCliente = new pesquisaClienteController();
+
+            if (!CPF.Equals(""))
+                ListarDados(pesquisaCliente.pesquisaPorCPF(CPF));
+           else
+                ListarDados(pesquisaCliente.pesquisaPorNome(Nome));
+        }
+
+
+        public void ListarDados(DataTable tabela)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = tabela;
+
+            DataGridCliente.DataSource = bs;//Colocar dados no DataGrid
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

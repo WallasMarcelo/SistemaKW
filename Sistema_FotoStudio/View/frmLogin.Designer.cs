@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.botaoCircular1 = new Sistema_FotoStudio.BotaoCircular();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,16 +64,6 @@
             this.txtUsuario.TabIndex = 4;
             this.txtUsuario.Tag = "";
             // 
-            // txtSenha
-            // 
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSenha.Location = new System.Drawing.Point(15, 246);
-            this.txtSenha.Multiline = true;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(176, 28);
-            this.txtSenha.TabIndex = 5;
-            this.txtSenha.Tag = "";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
@@ -96,6 +86,18 @@
             this.botaoCircular1.TabIndex = 8;
             this.botaoCircular1.Text = "Logar";
             this.botaoCircular1.UseVisualStyleBackColor = false;
+            this.botaoCircular1.Click += new System.EventHandler(this.botaoCircular1_Click);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenha.Location = new System.Drawing.Point(15, 246);
+            this.txtSenha.Multiline = true;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(176, 28);
+            this.txtSenha.TabIndex = 5;
+            this.txtSenha.Tag = "";
             // 
             // frmLogin
             // 
@@ -121,8 +123,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Panel panel1;
         private BotaoCircular botaoCircular1;
+        private System.Windows.Forms.TextBox txtSenha;
     }
 }

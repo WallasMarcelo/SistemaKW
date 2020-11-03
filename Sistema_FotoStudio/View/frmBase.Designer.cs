@@ -64,6 +64,7 @@
             this.btnDelete.Size = new System.Drawing.Size(61, 47);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSalvar
             // 
@@ -77,6 +78,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(61, 47);
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisar
             // 
@@ -90,6 +92,7 @@
             this.btnPesquisar.Size = new System.Drawing.Size(61, 47);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnCancelar
             // 
@@ -102,6 +105,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(61, 47);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAlterar
             // 
@@ -115,6 +119,7 @@
             this.btnAlterar.Size = new System.Drawing.Size(61, 47);
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
@@ -128,6 +133,7 @@
             this.btnNovo.Size = new System.Drawing.Size(61, 47);
             this.btnNovo.TabIndex = 0;
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // frmBase
             // 
@@ -147,14 +153,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnDelete;
+        protected System.Windows.Forms.Button btnAlterar;
+        protected System.Windows.Forms.Button btnNovo;
+        protected System.Windows.Forms.Button btnPesquisar;
+        protected System.Windows.Forms.Button btnCancelar;
+        protected System.Windows.Forms.Button btnSalvar;
+        protected System.Windows.Forms.Button btnDelete;
+        protected System.Windows.Forms.Panel panel1;
     }
 }
 

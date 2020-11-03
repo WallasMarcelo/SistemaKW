@@ -31,23 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisaFuncionario));
             this.gbConjuntoCampos = new System.Windows.Forms.GroupBox();
             this.gbPesquisarPor = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.dtgDados = new System.Windows.Forms.DataGridView();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.DataGridFuncionario = new System.Windows.Forms.DataGridView();
             this.gbConjuntoCampos.SuspendLayout();
             this.gbPesquisarPor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // gbConjuntoCampos
             // 
-            this.gbConjuntoCampos.Controls.Add(this.btnLimpar);
             this.gbConjuntoCampos.Controls.Add(this.gbPesquisarPor);
             this.gbConjuntoCampos.Controls.Add(this.btnPesquisar);
             this.gbConjuntoCampos.Location = new System.Drawing.Point(6, 2);
@@ -58,11 +55,9 @@
             // 
             // gbPesquisarPor
             // 
-            this.gbPesquisarPor.Controls.Add(this.textBox2);
-            this.gbPesquisarPor.Controls.Add(this.label2);
-            this.gbPesquisarPor.Controls.Add(this.textBox1);
+            this.gbPesquisarPor.Controls.Add(this.txtNome);
             this.gbPesquisarPor.Controls.Add(this.label3);
-            this.gbPesquisarPor.Controls.Add(this.maskedTextBox1);
+            this.gbPesquisarPor.Controls.Add(this.mskCPF);
             this.gbPesquisarPor.Controls.Add(this.label1);
             this.gbPesquisarPor.Location = new System.Drawing.Point(9, 14);
             this.gbPesquisarPor.Name = "gbPesquisarPor";
@@ -71,28 +66,12 @@
             this.gbPesquisarPor.TabStop = false;
             this.gbPesquisarPor.Text = "Pesquisar por:";
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Usuário:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(223, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNome.Location = new System.Drawing.Point(223, 39);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(233, 20);
+            this.txtNome.TabIndex = 6;
             // 
             // label3
             // 
@@ -103,13 +82,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nome:";
             // 
-            // maskedTextBox1
+            // mskCPF
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(6, 39);
-            this.maskedTextBox1.Mask = "999.999.999-99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(197, 20);
-            this.maskedTextBox1.TabIndex = 2;
+            this.mskCPF.Location = new System.Drawing.Point(6, 39);
+            this.mskCPF.Mask = "999.999.999-99";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(197, 20);
+            this.mskCPF.TabIndex = 2;
             // 
             // label1
             // 
@@ -127,22 +106,12 @@
             this.btnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPesquisar.FlatAppearance.BorderSize = 0;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Location = new System.Drawing.Point(525, 19);
+            this.btnPesquisar.Location = new System.Drawing.Point(488, 37);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(61, 47);
             this.btnPesquisar.TabIndex = 8;
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            // 
-            // dtgDados
-            // 
-            this.dtgDados.AllowUserToAddRows = false;
-            this.dtgDados.AllowUserToDeleteRows = false;
-            this.dtgDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDados.Location = new System.Drawing.Point(6, 151);
-            this.dtgDados.Name = "dtgDados";
-            this.dtgDados.ReadOnly = true;
-            this.dtgDados.Size = new System.Drawing.Size(593, 276);
-            this.dtgDados.TabIndex = 3;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnLimpar
             // 
@@ -151,25 +120,38 @@
             this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.Location = new System.Drawing.Point(525, 85);
+            this.btnLimpar.Location = new System.Drawing.Point(575, 39);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(61, 47);
             this.btnLimpar.TabIndex = 11;
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // DataGridFuncionario
+            // 
+            this.DataGridFuncionario.AllowUserToAddRows = false;
+            this.DataGridFuncionario.AllowUserToDeleteRows = false;
+            this.DataGridFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridFuncionario.Location = new System.Drawing.Point(6, 111);
+            this.DataGridFuncionario.Name = "DataGridFuncionario";
+            this.DataGridFuncionario.ReadOnly = true;
+            this.DataGridFuncionario.Size = new System.Drawing.Size(650, 316);
+            this.DataGridFuncionario.TabIndex = 3;
             // 
             // frmPesquisaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 433);
-            this.Controls.Add(this.dtgDados);
+            this.ClientSize = new System.Drawing.Size(656, 433);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.DataGridFuncionario);
             this.Controls.Add(this.gbConjuntoCampos);
             this.Name = "frmPesquisaFuncionario";
             this.Text = "Pesquisa de Funcionário";
             this.gbConjuntoCampos.ResumeLayout(false);
             this.gbPesquisarPor.ResumeLayout(false);
             this.gbPesquisarPor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,14 +160,12 @@
 
         private System.Windows.Forms.GroupBox gbConjuntoCampos;
         private System.Windows.Forms.GroupBox gbPesquisarPor;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskCPF;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgDados;
+        private System.Windows.Forms.DataGridView DataGridFuncionario;
         private System.Windows.Forms.Button btnLimpar;
     }
 }

@@ -59,5 +59,25 @@ namespace Sistema_FotoStudio.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_bellnotificationsnoticenotifyalert_3993856_112639 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder-bellnotificationsnoticenotifyalert-3993856_112639", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_bellnotificationsnoticenotifyalert_3993856_1126391 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder-bellnotificationsnoticenotifyalert-3993856_1126391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

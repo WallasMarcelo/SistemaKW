@@ -47,12 +47,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco de dados\AcessoDadosSqlServer.cs" />
     <Compile Include="BotaoCircular.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controller\BuscaCEPController.cs" />
+    <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\DependenteController.cs" />
+    <Compile Include="Controller\FornecedorController.cs" />
+    <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="Controller\pesquisaClienteController.cs" />
+    <Compile Include="Controller\pesquisaFuncionarioController.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="Controller\VendaController.cs" />
+    <Compile Include="Criptografia\Hash.cs" />
     <Compile Include="Model\BuscaCEP.cs" />
     <Compile Include="Model\CEP.cs" />
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Dependente.cs" />
+    <Compile Include="Model\Email.cs" />
+    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Fornecedor.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Model\Pessoa.cs" />
+    <Compile Include="Model\Produto.cs" />
+    <Compile Include="Model\Servico.cs" />
+    <Compile Include="Model\Telefone.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\vendas.cs" />
+    <Compile Include="View\frmAniversariantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAniversariantes.Designer.cs">
+      <DependentUpon>frmAniversariantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +112,12 @@
     </Compile>
     <Compile Include="View\frmCadastroServico.Designer.cs">
       <DependentUpon>frmCadastroServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCadastroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadastroUsuarios.Designer.cs">
+      <DependentUpon>frmCadastroUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmDependentes.cs">
       <SubType>Form</SubType>
@@ -133,6 +167,18 @@
     <Compile Include="View\frmPesquisaServico.Designer.cs">
       <DependentUpon>frmPesquisaServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPesquisaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPesquisaUsuario.Designer.cs">
+      <DependentUpon>frmPesquisaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPesquisaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPesquisaVenda.Designer.cs">
+      <DependentUpon>frmPesquisaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +191,31 @@
     <Compile Include="View\frmCadastroFornecedor.Designer.cs">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\pesquisaFornecedorController.cs" />
+    <Compile Include="View\PesquisaResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaResultado.Designer.cs">
+      <DependentUpon>PesquisaResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PesquisaResultadoFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaResultadoFornecedor.Designer.cs">
+      <DependentUpon>PesquisaResultadoFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\pesquisaResultadoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="View\frmAniversariantes.resx">
+      <DependentUpon>frmAniversariantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +241,9 @@
     <EmbeddedResource Include="View\frmCadastroServico.resx">
       <DependentUpon>frmCadastroServico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCadastroUsuarios.resx">
+      <DependentUpon>frmCadastroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDependentes.resx">
       <DependentUpon>frmDependentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,11 +268,29 @@
     <EmbeddedResource Include="View\frmPesquisaServico.resx">
       <DependentUpon>frmPesquisaServico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPesquisaUsuario.resx">
+      <DependentUpon>frmPesquisaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPesquisaVenda.resx">
+      <DependentUpon>frmPesquisaVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadastroFornecedor.resx">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaResultado.resx">
+      <DependentUpon>PesquisaResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaResultadoFornecedor.resx">
+      <DependentUpon>PesquisaResultadoFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\pesquisaResultadoFuncionario.resx">
+      <DependentUpon>pesquisaResultadoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -213,6 +305,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconfinder-bellnotificationsnoticenotifyalert-3993856_112639.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder-bellnotificationsnoticenotifyalert-3993856_1126391.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
