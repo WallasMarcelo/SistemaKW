@@ -28,10 +28,14 @@ namespace Sistema_FotoStudio.Model
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
 
 
-        public int Inserir(Usuario usuario)
+        public int Inserir(Usuario usuario, bool alterar)
         {
+            
+            if(alterar)
+                acessoDados.AdicionarParametros("@Funcao", 2);//alterar
+            else
+                acessoDados.AdicionarParametros("@Funcao", 1);//cadastrar
 
-            acessoDados.AdicionarParametros("@Funcao", 1);//alterar
             acessoDados.AdicionarParametros("@Cod_Funcionario", usuario.Cod_funcionario);
             acessoDados.AdicionarParametros("@Tipo", usuario.Tipo);
             acessoDados.AdicionarParametros("@Login", usuario.Login);
@@ -69,6 +73,19 @@ namespace Sistema_FotoStudio.Model
             acessoDados.LimparParametros();
             acessoDados.AdicionarParametros("@Funcao", 2);
             acessoDados.AdicionarParametros("@Usuario", nomeUsuario);
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_usuario");
+
+            return dataTable;
+
+        }
+
+        public DataTable PesquisarPorCodigoTabela(string Codigo)
+        {
+
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 3);
+            acessoDados.AdicionarParametros("@Cod", Codigo);
 
             DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_usuario");
 

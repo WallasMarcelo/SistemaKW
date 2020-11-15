@@ -30,25 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisaUsuario));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFuncionario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codigo_funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridUsuario = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtCodigo);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtFuncionario);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnLimpar);
             this.groupBox2.Controls.Add(this.btnPesquisar);
@@ -58,12 +55,12 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // textBox2
+            // txtCodigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
-            this.textBox2.TabIndex = 16;
+            this.txtCodigo.Location = new System.Drawing.Point(15, 40);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(110, 20);
+            this.txtCodigo.TabIndex = 16;
             // 
             // label2
             // 
@@ -74,12 +71,12 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Código do Funcionário";
             // 
-            // textBox1
+            // txtFuncionario
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtFuncionario.Location = new System.Drawing.Point(141, 40);
+            this.txtFuncionario.Name = "txtFuncionario";
+            this.txtFuncionario.Size = new System.Drawing.Size(233, 20);
+            this.txtFuncionario.TabIndex = 9;
             // 
             // label3
             // 
@@ -102,6 +99,7 @@
             this.btnLimpar.Size = new System.Drawing.Size(61, 47);
             this.btnLimpar.TabIndex = 12;
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -115,51 +113,32 @@
             this.btnPesquisar.Size = new System.Drawing.Size(61, 47);
             this.btnPesquisar.TabIndex = 8;
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // dataGridView1
+            // dataGridUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo_funcionario,
-            this.nome_funcionario,
-            this.usuario});
-            this.dataGridView1.Location = new System.Drawing.Point(5, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(594, 244);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // codigo_funcionario
-            // 
-            this.codigo_funcionario.HeaderText = "Código Funcionário";
-            this.codigo_funcionario.Name = "codigo_funcionario";
-            this.codigo_funcionario.ReadOnly = true;
-            // 
-            // nome_funcionario
-            // 
-            this.nome_funcionario.HeaderText = "Nome Funcionário";
-            this.nome_funcionario.Name = "nome_funcionario";
-            this.nome_funcionario.ReadOnly = true;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Usuário";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
+            this.dataGridUsuario.AllowUserToAddRows = false;
+            this.dataGridUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridUsuario.Location = new System.Drawing.Point(5, 94);
+            this.dataGridUsuario.Name = "dataGridUsuario";
+            this.dataGridUsuario.ReadOnly = true;
+            this.dataGridUsuario.Size = new System.Drawing.Size(594, 244);
+            this.dataGridUsuario.TabIndex = 4;
             // 
             // frmPesquisaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 349);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridUsuario);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
             this.Name = "frmPesquisaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Usuário";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,15 +146,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFuncionario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo_funcionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome_funcionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
+        private System.Windows.Forms.DataGridView dataGridUsuario;
     }
 }

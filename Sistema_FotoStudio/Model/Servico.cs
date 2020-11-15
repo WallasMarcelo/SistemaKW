@@ -87,6 +87,17 @@ namespace Sistema_FotoStudio.Model
             return dataTable;
         }
 
+        public DataTable PesquisarTodos()
+        {
+         
+            acessoDados.AdicionarParametros("@Funcao", 3);
+            
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_servico");
+
+            return dataTable;
+        }
+
 
 
     }

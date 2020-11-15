@@ -72,7 +72,7 @@ namespace Sistema_FotoStudio.View
 
         private void vendasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmVendas cadastroVenda = new frmVendas();
+            frmVendas cadastroVenda = new frmVendas(this);
             cadastroVenda.MdiParent = this;
             cadastroVenda.Show();
         }
@@ -134,7 +134,7 @@ namespace Sistema_FotoStudio.View
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroUsuarios cadastroUsuarios = new frmCadastroUsuarios();
+            frmCadastroUsuarios cadastroUsuarios = new frmCadastroUsuarios(this);
             cadastroUsuarios.MdiParent = this;
             cadastroUsuarios.Show();
                 
@@ -158,6 +158,20 @@ namespace Sistema_FotoStudio.View
             frmAniversariantes aniversariantes = new frmAniversariantes(aniversario);
             aniversariantes.MdiParent = this;
             aniversariantes.Show();
+        }
+
+        private void clienteToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmRelatorioCliente relatorioCliente = new frmRelatorioCliente();
+            relatorioCliente.MdiParent = this;
+            relatorioCliente.Show();
+        }
+
+        private void servçosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioServiço relatorioServiço = new frmRelatorioServiço();
+            relatorioServiço.MdiParent = this;
+            relatorioServiço.Show();
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.bpbDadosClienteFunc = new System.Windows.Forms.GroupBox();
+            this.dtpDataVenda = new System.Windows.Forms.DateTimePicker();
             this.txtCodigoFuncionario = new System.Windows.Forms.TextBox();
             this.lblNomeFuncionario = new System.Windows.Forms.Label();
             this.lblCodigoFuncionario = new System.Windows.Forms.Label();
@@ -38,10 +39,11 @@
             this.lblCPF = new System.Windows.Forms.Label();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.lblDataVenda = new System.Windows.Forms.Label();
-            this.mskDataVenda = new System.Windows.Forms.MaskedTextBox();
             this.txtCodigoVenda = new System.Windows.Forms.TextBox();
             this.lblCodigoVenda = new System.Windows.Forms.Label();
             this.bpbDadoProdutoServico = new System.Windows.Forms.GroupBox();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.gpbTipo = new System.Windows.Forms.GroupBox();
             this.rbServico = new System.Windows.Forms.RadioButton();
             this.rbProduto = new System.Windows.Forms.RadioButton();
@@ -56,6 +58,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblTotalInvisivel = new System.Windows.Forms.Label();
             this.dgvItensVenda = new System.Windows.Forms.DataGridView();
+            this.lblValorTotal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.bpbDadosClienteFunc.SuspendLayout();
             this.bpbDadoProdutoServico.SuspendLayout();
@@ -66,22 +69,27 @@
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnPesquisar
             // 
             this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnDelete
             // 
@@ -89,6 +97,7 @@
             // 
             // bpbDadosClienteFunc
             // 
+            this.bpbDadosClienteFunc.Controls.Add(this.dtpDataVenda);
             this.bpbDadosClienteFunc.Controls.Add(this.txtCodigoFuncionario);
             this.bpbDadosClienteFunc.Controls.Add(this.lblNomeFuncionario);
             this.bpbDadosClienteFunc.Controls.Add(this.lblCodigoFuncionario);
@@ -98,7 +107,6 @@
             this.bpbDadosClienteFunc.Controls.Add(this.lblCPF);
             this.bpbDadosClienteFunc.Controls.Add(this.txtNomeCliente);
             this.bpbDadosClienteFunc.Controls.Add(this.lblDataVenda);
-            this.bpbDadosClienteFunc.Controls.Add(this.mskDataVenda);
             this.bpbDadosClienteFunc.Controls.Add(this.txtCodigoVenda);
             this.bpbDadosClienteFunc.Controls.Add(this.lblCodigoVenda);
             this.bpbDadosClienteFunc.Location = new System.Drawing.Point(3, 79);
@@ -107,6 +115,15 @@
             this.bpbDadosClienteFunc.TabIndex = 1;
             this.bpbDadosClienteFunc.TabStop = false;
             this.bpbDadosClienteFunc.Text = "Dados";
+            this.bpbDadosClienteFunc.Enter += new System.EventHandler(this.bpbDadosClienteFunc_Enter);
+            // 
+            // dtpDataVenda
+            // 
+            this.dtpDataVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataVenda.Location = new System.Drawing.Point(444, 86);
+            this.dtpDataVenda.Name = "dtpDataVenda";
+            this.dtpDataVenda.Size = new System.Drawing.Size(122, 20);
+            this.dtpDataVenda.TabIndex = 14;
             // 
             // txtCodigoFuncionario
             // 
@@ -114,6 +131,7 @@
             this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
             this.txtCodigoFuncionario.Size = new System.Drawing.Size(91, 20);
             this.txtCodigoFuncionario.TabIndex = 13;
+            this.txtCodigoFuncionario.Leave += new System.EventHandler(this.txtCodigoFuncionario_Leave);
             // 
             // lblNomeFuncionario
             // 
@@ -148,7 +166,9 @@
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(174, 20);
             this.mskCPF.TabIndex = 8;
+            this.mskCPF.Enter += new System.EventHandler(this.mskCPF_Enter);
             this.mskCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskCPF_KeyPress);
+            this.mskCPF.Leave += new System.EventHandler(this.mskCPF_Leave);
             // 
             // lblNomeCliente
             // 
@@ -178,21 +198,12 @@
             // lblDataVenda
             // 
             this.lblDataVenda.AutoSize = true;
-            this.lblDataVenda.Location = new System.Drawing.Point(454, 70);
+            this.lblDataVenda.Location = new System.Drawing.Point(442, 70);
             this.lblDataVenda.Name = "lblDataVenda";
             this.lblDataVenda.Size = new System.Drawing.Size(67, 13);
             this.lblDataVenda.TabIndex = 3;
             this.lblDataVenda.Text = "Data Venda:";
             this.lblDataVenda.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // mskDataVenda
-            // 
-            this.mskDataVenda.Location = new System.Drawing.Point(457, 86);
-            this.mskDataVenda.Mask = "00/00/0000";
-            this.mskDataVenda.Name = "mskDataVenda";
-            this.mskDataVenda.Size = new System.Drawing.Size(118, 20);
-            this.mskDataVenda.TabIndex = 2;
-            this.mskDataVenda.ValidatingType = typeof(System.DateTime);
             // 
             // txtCodigoVenda
             // 
@@ -212,6 +223,8 @@
             // 
             // bpbDadoProdutoServico
             // 
+            this.bpbDadoProdutoServico.Controls.Add(this.btnRemover);
+            this.bpbDadoProdutoServico.Controls.Add(this.btnAdicionar);
             this.bpbDadoProdutoServico.Controls.Add(this.gpbTipo);
             this.bpbDadoProdutoServico.Controls.Add(this.txtQuantidade);
             this.bpbDadoProdutoServico.Controls.Add(this.lblValorunitario);
@@ -227,6 +240,27 @@
             this.bpbDadoProdutoServico.TabIndex = 14;
             this.bpbDadoProdutoServico.TabStop = false;
             this.bpbDadoProdutoServico.Text = "Dados Produto";
+            this.bpbDadoProdutoServico.Enter += new System.EventHandler(this.bpbDadoProdutoServico_Enter);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(392, 84);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 15;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.Location = new System.Drawing.Point(293, 84);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.TabIndex = 14;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // gpbTipo
             // 
@@ -316,6 +350,7 @@
             this.txtCodigoProduto.Name = "txtCodigoProduto";
             this.txtCodigoProduto.Size = new System.Drawing.Size(123, 20);
             this.txtCodigoProduto.TabIndex = 1;
+            this.txtCodigoProduto.Leave += new System.EventHandler(this.txtCodigoProduto_Leave);
             // 
             // lblCodigoProduto
             // 
@@ -330,7 +365,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(468, 508);
+            this.lblTotal.Location = new System.Drawing.Point(455, 510);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(66, 25);
             this.lblTotal.TabIndex = 15;
@@ -353,11 +388,23 @@
             this.dgvItensVenda.Size = new System.Drawing.Size(584, 150);
             this.dgvItensVenda.TabIndex = 17;
             // 
+            // lblValorTotal
+            // 
+            this.lblValorTotal.AutoSize = true;
+            this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorTotal.Location = new System.Drawing.Point(520, 511);
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(45, 24);
+            this.lblValorTotal.TabIndex = 18;
+            this.lblValorTotal.Text = "0,00";
+            this.lblValorTotal.Click += new System.EventHandler(this.lblValorTotal_Click);
+            // 
             // frmVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 536);
+            this.Controls.Add(this.lblValorTotal);
             this.Controls.Add(this.dgvItensVenda);
             this.Controls.Add(this.lblTotalInvisivel);
             this.Controls.Add(this.lblTotal);
@@ -366,12 +413,13 @@
             this.Name = "frmVendas";
             this.Text = "Vendas";
             this.Load += new System.EventHandler(this.frmVendas_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.bpbDadosClienteFunc, 0);
             this.Controls.SetChildIndex(this.bpbDadoProdutoServico, 0);
             this.Controls.SetChildIndex(this.lblTotal, 0);
             this.Controls.SetChildIndex(this.lblTotalInvisivel, 0);
             this.Controls.SetChildIndex(this.dgvItensVenda, 0);
+            this.Controls.SetChildIndex(this.lblValorTotal, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.bpbDadosClienteFunc.ResumeLayout(false);
             this.bpbDadosClienteFunc.PerformLayout();
@@ -397,7 +445,6 @@
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.TextBox txtNomeCliente;
         private System.Windows.Forms.Label lblDataVenda;
-        private System.Windows.Forms.MaskedTextBox mskDataVenda;
         private System.Windows.Forms.TextBox txtCodigoVenda;
         private System.Windows.Forms.TextBox txtCodigoFuncionario;
         private System.Windows.Forms.GroupBox bpbDadoProdutoServico;
@@ -415,5 +462,9 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblTotalInvisivel;
         private System.Windows.Forms.DataGridView dgvItensVenda;
+        private System.Windows.Forms.Label lblValorTotal;
+        private System.Windows.Forms.DateTimePicker dtpDataVenda;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Button btnAdicionar;
     }
 }

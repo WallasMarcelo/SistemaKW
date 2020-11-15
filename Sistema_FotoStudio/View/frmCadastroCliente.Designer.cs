@@ -97,6 +97,7 @@
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // gpbDados
             // 

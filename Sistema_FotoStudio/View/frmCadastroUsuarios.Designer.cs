@@ -46,10 +46,12 @@
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnPesquisar
             // 
@@ -59,6 +61,7 @@
             // btnCancelar
             // 
             this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 

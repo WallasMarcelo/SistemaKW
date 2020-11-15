@@ -14,9 +14,20 @@ namespace Sistema_FotoStudio.View
 {
     public partial class frmCadastroUsuarios : frmBase
     {
-        public frmCadastroUsuarios()
+        private bool alterar = false;
+        private frmPrincipal principal;
+        public frmCadastroUsuarios(frmPrincipal principal)
         {
             InitializeComponent();
+            Inativar();
+
+            this.principal = principal;
+
+            btnNovo.Enabled = true;
+            btnPesquisar.Enabled = true;
+            btnCancelar.Enabled = true;
+            txtCod_Funcionario.Enabled = true;
+            txtLogin.Enabled = true;
         }
 
         private string codigo { get => txtCod_Funcionario.Text; set => txtCod_Funcionario.Text = value; }
@@ -54,9 +65,9 @@ namespace Sistema_FotoStudio.View
             set
             {
                 if (value == 1)
-                    cmbTipoUsuario.SelectedItem = cmbTipoUsuario.FindString("Usuário");
+                    cmbTipoUsuario.SelectedItem = cmbTipoUsuario.SelectedIndex = 0;
                 else
-                    cmbTipoUsuario.SelectedItem = cmbTipoUsuario.FindString("Administração");
+                    cmbTipoUsuario.SelectedItem = cmbTipoUsuario.SelectedIndex = 1;
             }
         
         }
@@ -82,9 +93,10 @@ namespace Sistema_FotoStudio.View
             {
                 UsuarioController usuarioController = new UsuarioController();
                 
-                if(usuarioController.Inserir(codigo,Login,Senha,Tipo,Situacao) == 1)
+                if(usuarioController.Inserir(codigo,Login,Senha,Tipo,Situacao,alterar) == 1)
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso!");
+                    
                 }
                 else
                 {
@@ -109,8 +121,7 @@ namespace Sistema_FotoStudio.View
 
             }
 
-
-           // usuarioController.PesquisarPorNome(Usuario, this, this.principal);
+           usuarioController.pesquisarPorNome(Login,  this, this.principal);
         }
 
 
@@ -120,7 +131,73 @@ namespace Sistema_FotoStudio.View
             Login = usuario.Login;
             Tipo = usuario.Tipo;
             Situacao = usuario.situacao;
-            
+
+            btnAlterar.Enabled = true;
+
+        }
+
+
+        protected void Inativar()
+        {
+            txtCod_Funcionario.Enabled = false;
+            txtSenha.Enabled = false;
+            cmbTipoUsuario.Enabled = false;
+            gpbAtivo.Enabled = false;
+
+            btnAlterar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnDelete.Enabled = false;
+            alterar = false;
+
+
+        }
+
+        protected void Ativar()
+        {
+            txtCod_Funcionario.Enabled = true;
+            txtLogin.Enabled = true;
+            txtSenha.Enabled = true;
+            cmbTipoUsuario.Enabled = true;
+            gpbAtivo.Enabled = true;
+
+            btnAlterar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSalvar.Enabled = true;
+
+        }
+
+        protected void Limpar()
+        {
+            txtCod_Funcionario.Text = "";
+            txtLogin.Text = "";
+            txtSenha.Text = "";
+            cmbTipoUsuario.SelectedIndex = - 1;
+            rbSim.Checked = false;
+            rbNao.Checked = false;
+
+            alterar = false;
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+            Inativar();
+
+            txtCod_Funcionario.Enabled = true;
+            txtLogin.Enabled = true;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            Ativar();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Ativar();
+            alterar = true;
         }
     }
 }

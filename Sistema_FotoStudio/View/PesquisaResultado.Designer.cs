@@ -53,7 +53,6 @@
             this.ClientSize = new System.Drawing.Size(643, 196);
             this.Controls.Add(this.DataGrid);
             this.Name = "PesquisaResultado";
-            this.Text = "PesquisaResultado";
             this.Load += new System.EventHandler(this.PesquisaResultado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             this.ResumeLayout(false);

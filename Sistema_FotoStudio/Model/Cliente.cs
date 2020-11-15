@@ -84,6 +84,18 @@ namespace Sistema_FotoStudio.Model
 
         }
 
+        public DataTable PesquisarTodos()
+        {
+
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 4);
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_cliente");
+
+            return dataTable;
+
+        }
+
         public DataTable PesquisarPorCPFTabela(string CPF)
         {
 
@@ -143,6 +155,16 @@ namespace Sistema_FotoStudio.Model
             return cliente;
         }
 
+        public int Inativar(String CPF)
+        {
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 3);
+            acessoDados.AdicionarParametros("@CPF_Pessoa", CPF);
+
+            return acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_Cliente_Funcionario_Fornecedor");
+
+           
+        }
 
     }
 }

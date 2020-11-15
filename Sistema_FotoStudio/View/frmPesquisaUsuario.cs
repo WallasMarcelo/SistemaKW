@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_FotoStudio.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,37 @@ namespace Sistema_FotoStudio.View
         {
             InitializeComponent();
         }
+
+        private String Codigo { get => txtCodigo.Text; set => txtCodigo.Text = value; } 
+        private String Nome { get => txtFuncionario.Text; set => txtFuncionario.Text = value;}
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pesquisaUsuarioController pesquisaUsuario = new pesquisaUsuarioController();
+
+            if (!Codigo.Equals(""))
+                ListarDados(pesquisaUsuario.pesquisaPorCodigo(Codigo));
+            else
+                ListarDados(pesquisaUsuario.pesquisaPorNome(Nome));
+        }
+
+        public void ListarDados(DataTable tabela)
+        {
+
+
+            dataGridUsuario.DataSource = tabela;
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtCodigo.Text = "";
+            txtFuncionario.Text = "";
+
+            dataGridUsuario.DataSource = null;
+            dataGridUsuario.Rows.Clear();
+            dataGridUsuario.Refresh();
+        }
     }
 }
+

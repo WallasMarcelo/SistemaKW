@@ -71,13 +71,24 @@ namespace Sistema_FotoStudio.Controller
 
         }
 
+        public DataTable PesquisarTodos()
+        {
+            Cliente cliente = new Cliente();
+            return cliente.PesquisarTodos();
+        }
+
         public void PassarCPF(String CPF, frmCadastroCliente cadastroCliente)
         {
             Cliente cliente = PesquisarPorCPF(CPF);//Realizar pesquisa pela cpf da linha escolhida do DAtaGrd
             cadastroCliente.PassarValores(cliente);//Cahmar método passarValores do Forms
          
-
         }
+
+        public int Inativar(String CPF)
+        {
+            Cliente cliente = new Cliente();
+            return cliente.Inativar(CPF);
+;        }
 
     }
 }
