@@ -102,6 +102,16 @@
     <Compile Include="Model\Telefone.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Model\vendas.cs" />
+    <Compile Include="sistemakwDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemakwDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemakwDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemakwDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\frmAniversariantes.cs">
       <SubType>Form</SubType>
@@ -231,6 +241,12 @@
     <Compile Include="View\frmRelatorioServiço.Designer.cs">
       <DependentUpon>frmRelatorioServiço.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmRelatorioVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRelatorioVenda.Designer.cs">
+      <DependentUpon>frmRelatorioVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,9 +282,11 @@
       <DependentUpon>pesquisaResultadoVendas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Relatorios\RelatorioCliente.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioProdutosMaisVendidos.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioServico.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RelatorioVendas.rdlc" />
     <EmbeddedResource Include="View\frmAniversariantes.resx">
       <DependentUpon>frmAniversariantes.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +360,9 @@
     <EmbeddedResource Include="View\frmRelatorioServiço.resx">
       <DependentUpon>frmRelatorioServiço.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmRelatorioVenda.resx">
+      <DependentUpon>frmRelatorioVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmVendas.resx">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +402,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sistemakwDataSet.xsc">
+      <DependentUpon>sistemakwDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistemakwDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemakwDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemakwDataSet.xss">
+      <DependentUpon>sistemakwDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistemakwDataSet1.xsc">
+      <DependentUpon>sistemakwDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sistemakwDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemakwDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemakwDataSet1.xss">
+      <DependentUpon>sistemakwDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

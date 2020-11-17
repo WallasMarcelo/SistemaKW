@@ -173,5 +173,12 @@ namespace Sistema_FotoStudio.View
             relatorioServiço.MdiParent = this;
             relatorioServiço.Show();
         }
+
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioVenda relatorioVenda = new frmRelatorioVenda();
+            relatorioVenda.MdiParent = this;
+            relatorioVenda.Show();
+        }
     }
 }

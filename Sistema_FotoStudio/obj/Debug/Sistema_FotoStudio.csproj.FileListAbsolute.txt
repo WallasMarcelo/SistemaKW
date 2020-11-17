@@ -110,11 +110,13 @@ C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPr
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmCadastroFornedor.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmRelatorioCliente.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmRelatorioServiço.resources
+C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmRelatorioVenda.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmVendas.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.PesquisaResultado.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.PesquisaResultadoFornecedor.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.pesquisaResultadoFuncionario.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmPesquisaResultadoUsuario.resources
+C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.pesquisaResultadoVendas.resources
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.GenerateResource.cache
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\RdlCompile.cache
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\RdlCompile.compiled
@@ -122,4 +124,3 @@ C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.Cor
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.CopyComplete
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.exe
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.pdb
-C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.pesquisaResultadoVendas.resources

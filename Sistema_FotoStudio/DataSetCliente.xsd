@@ -137,6 +137,25 @@ SELECT CPF_pessoa, Nome, Sobrenome, RG, Situacao, Sexo, Data_Nasc FROM tbl_Pesso
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sistemakwConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select c.cod_cliente, c.cpf_pessoa, p.Nome + ''  + p.Sobrenome as Cliente, p.Data_Nasc  from tbl_Cliente as c inner join tbl_Pessoa as p on c.cpf_pessoa = p.CPF_pessoa </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_cliente" DataSetColumn="cod_cliente" />
+              <Mapping SourceColumn="cpf_pessoa" DataSetColumn="cpf_pessoa" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Data_Nasc" DataSetColumn="Data_Nasc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -145,7 +164,7 @@ SELECT CPF_pessoa, Nome, Sobrenome, RG, Situacao, Sexo, Data_Nasc FROM tbl_Pesso
   <xs:element name="DataSetCliente" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSetCliente" msprop:Generator_UserDSName="DataSetCliente">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_Cliente" msprop:Generator_TableClassName="tbl_ClienteDataTable" msprop:Generator_TableVarName="tabletbl_Cliente" msprop:Generator_TablePropName="tbl_Cliente" msprop:Generator_RowDeletingName="tbl_ClienteRowDeleting" msprop:Generator_RowChangingName="tbl_ClienteRowChanging" msprop:Generator_RowEvHandlerName="tbl_ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ClienteRowDeleted" msprop:Generator_UserTableName="tbl_Cliente" msprop:Generator_RowChangedName="tbl_ClienteRowChanged" msprop:Generator_RowEvArgName="tbl_ClienteRowChangeEvent" msprop:Generator_RowClassName="tbl_ClienteRow">
+        <xs:element name="tbl_Cliente" msprop:Generator_TableClassName="tbl_ClienteDataTable" msprop:Generator_TableVarName="tabletbl_Cliente" msprop:Generator_RowChangedName="tbl_ClienteRowChanged" msprop:Generator_TablePropName="tbl_Cliente" msprop:Generator_RowDeletingName="tbl_ClienteRowDeleting" msprop:Generator_RowChangingName="tbl_ClienteRowChanging" msprop:Generator_RowEvHandlerName="tbl_ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ClienteRowDeleted" msprop:Generator_RowClassName="tbl_ClienteRow" msprop:Generator_UserTableName="tbl_Cliente" msprop:Generator_RowEvArgName="tbl_ClienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_cliente" msprop:Generator_ColumnPropNameInRow="cod_cliente" msprop:Generator_ColumnPropNameInTable="cod_clienteColumn" msprop:Generator_UserColumnName="cod_cliente" type="xs:int" />
@@ -159,7 +178,7 @@ SELECT CPF_pessoa, Nome, Sobrenome, RG, Situacao, Sexo, Data_Nasc FROM tbl_Pesso
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Pessoa" msprop:Generator_TableClassName="tbl_PessoaDataTable" msprop:Generator_TableVarName="tabletbl_Pessoa" msprop:Generator_TablePropName="tbl_Pessoa" msprop:Generator_RowDeletingName="tbl_PessoaRowDeleting" msprop:Generator_RowChangingName="tbl_PessoaRowChanging" msprop:Generator_RowEvHandlerName="tbl_PessoaRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_PessoaRowDeleted" msprop:Generator_UserTableName="tbl_Pessoa" msprop:Generator_RowChangedName="tbl_PessoaRowChanged" msprop:Generator_RowEvArgName="tbl_PessoaRowChangeEvent" msprop:Generator_RowClassName="tbl_PessoaRow">
+        <xs:element name="tbl_Pessoa" msprop:Generator_TableClassName="tbl_PessoaDataTable" msprop:Generator_TableVarName="tabletbl_Pessoa" msprop:Generator_RowChangedName="tbl_PessoaRowChanged" msprop:Generator_TablePropName="tbl_Pessoa" msprop:Generator_RowDeletingName="tbl_PessoaRowDeleting" msprop:Generator_RowChangingName="tbl_PessoaRowChanging" msprop:Generator_RowEvHandlerName="tbl_PessoaRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_PessoaRowDeleted" msprop:Generator_RowClassName="tbl_PessoaRow" msprop:Generator_UserTableName="tbl_Pessoa" msprop:Generator_RowEvArgName="tbl_PessoaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CPF_pessoa" msprop:Generator_ColumnVarNameInTable="columnCPF_pessoa" msprop:Generator_ColumnPropNameInRow="CPF_pessoa" msprop:Generator_ColumnPropNameInTable="CPF_pessoaColumn" msprop:Generator_UserColumnName="CPF_pessoa">
@@ -202,6 +221,28 @@ SELECT CPF_pessoa, Nome, Sobrenome, RG, Situacao, Sexo, Data_Nasc FROM tbl_Pesso
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_cliente" msprop:Generator_ColumnPropNameInRow="cod_cliente" msprop:Generator_ColumnPropNameInTable="cod_clienteColumn" msprop:Generator_UserColumnName="cod_cliente" type="xs:int" />
+              <xs:element name="cpf_pessoa" msprop:Generator_ColumnVarNameInTable="columncpf_pessoa" msprop:Generator_ColumnPropNameInRow="cpf_pessoa" msprop:Generator_ColumnPropNameInTable="cpf_pessoaColumn" msprop:Generator_UserColumnName="cpf_pessoa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_Nasc" msprop:Generator_ColumnVarNameInTable="columnData_Nasc" msprop:Generator_ColumnPropNameInRow="Data_Nasc" msprop:Generator_ColumnPropNameInTable="Data_NascColumn" msprop:Generator_UserColumnName="Data_Nasc" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -212,10 +253,15 @@ SELECT CPF_pessoa, Nome, Sobrenome, RG, Situacao, Sexo, Data_Nasc FROM tbl_Pesso
       <xs:selector xpath=".//mstns:tbl_Pessoa" />
       <xs:field xpath="mstns:CPF_pessoa" />
     </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:cod_cliente" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__tbl_Clien__cpf_p__4CA06362" msdata:parent="tbl_Pessoa" msdata:child="tbl_Cliente" msdata:parentkey="CPF_pessoa" msdata:childkey="cpf_pessoa" msprop:Generator_UserChildTable="tbl_Cliente" msprop:Generator_ChildPropName="Gettbl_ClienteRows" msprop:Generator_UserRelationName="FK__tbl_Clien__cpf_p__4CA06362" msprop:Generator_RelationVarName="relationFK__tbl_Clien__cpf_p__4CA06362" msprop:Generator_UserParentTable="tbl_Pessoa" msprop:Generator_ParentPropName="tbl_PessoaRow" />
+      <msdata:Relationship name="FK__tbl_Clien__cpf_p__4CA06362" msdata:parent="tbl_Pessoa" msdata:child="tbl_Cliente" msdata:parentkey="CPF_pessoa" msdata:childkey="cpf_pessoa" msprop:Generator_UserChildTable="tbl_Cliente" msprop:Generator_ChildPropName="Gettbl_ClienteRows" msprop:Generator_UserRelationName="FK__tbl_Clien__cpf_p__4CA06362" msprop:Generator_ParentPropName="tbl_PessoaRow" msprop:Generator_RelationVarName="relationFK__tbl_Clien__cpf_p__4CA06362" msprop:Generator_UserParentTable="tbl_Pessoa" />
+      <msdata:Relationship name="FK__tbl_Clien__cpf_p__4CA063621" msdata:parent="tbl_Pessoa" msdata:child="DataTable1" msdata:parentkey="CPF_pessoa" msdata:childkey="cpf_pessoa" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK__tbl_Clien__cpf_p__4CA063621" msprop:Generator_ParentPropName="tbl_PessoaRow" msprop:Generator_RelationVarName="relationFK__tbl_Clien__cpf_p__4CA063621" msprop:Generator_UserParentTable="tbl_Pessoa" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

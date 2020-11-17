@@ -1,6 +1,6 @@
 ﻿namespace Sistema_FotoStudio.View
 {
-    partial class frmRelatorioCliente
+    partial class frmRelatorioVenda
     {
         /// <summary>
         /// Required designer variable.
@@ -34,24 +34,26 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_FotoStudio.Relatorios.RelatorioCliente.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_FotoStudio.Relatorios.RelatorioVendas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(744, 337);
+            this.reportViewer1.Size = new System.Drawing.Size(888, 490);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // frmRelatorioCliente
+            // frmRelatorioVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 337);
+            this.ClientSize = new System.Drawing.Size(888, 490);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmRelatorioCliente";
+            this.MaximizeBox = false;
+            this.Name = "frmRelatorioVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Relatório de Clientes";
-            this.Load += new System.EventHandler(this.frmRelatorioCliente_Load);
+            this.Text = "Relatório Vendas";
+            this.Load += new System.EventHandler(this.frmRelatorioVenda_Load);
             this.ResumeLayout(false);
 
         }
