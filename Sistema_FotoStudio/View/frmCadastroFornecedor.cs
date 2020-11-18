@@ -384,5 +384,21 @@ namespace Sistema_FotoStudio.View
         {
             MessageBox.Show("Nenhum registro encontrado");
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja realmente inativar esse cadastro?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                FornecedorController fornecedorController = new FornecedorController();
+                int reultado = fornecedorController.Inativar(cpf);
+
+                if (reultado == 0)
+                    MessageBox.Show("Inativado com sucesso!");
+
+
+            }
+        }
     }
 }

@@ -88,7 +88,7 @@ namespace Sistema_FotoStudio.Controller
         {
             Cliente cliente = new Cliente();
             return cliente.Inativar(CPF);
-;        }
+;       }
 
     }
 }

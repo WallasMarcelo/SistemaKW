@@ -140,6 +140,15 @@ namespace Sistema_FotoStudio.Model
             return funcionario;
         }
 
+        public int Inativar(String CPF)
+        {
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 3);
+            acessoDados.AdicionarParametros("@CPF_Pessoa", CPF);
+
+            return acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_Cliente_Funcionario_Fornecedor");
+        }
+
 
 
 

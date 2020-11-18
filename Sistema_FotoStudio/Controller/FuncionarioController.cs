@@ -71,5 +71,12 @@ namespace Sistema_FotoStudio.Controller
 
         }
 
+        public int Inativar(String CPF)
+        {
+            Funcionario funcionario = new Funcionario();
+            return funcionario.Inativar(CPF);
+            ;
+        }
+
     }
 }

@@ -16,6 +16,7 @@ namespace Sistema_FotoStudio.View
     {
         DataTable dataTable = new DataTable("itensVenda");
         int cont = 0;
+        Decimal total = 0;
 
         frmPrincipal principal;
 
@@ -192,14 +193,17 @@ namespace Sistema_FotoStudio.View
             dataTable.Rows[cont]["Total"] = Convert.ToDecimal(valorUnitario) * Convert.ToDecimal(Quantidade) ;
 
             dgvItensVenda.DataSource = dataTable;
-            //CalcularTotal();
+
+            total = total + Convert.ToDecimal(valorUnitario) * Convert.ToDecimal(Quantidade);
+            valorTotal = total.ToString();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
            
             Decimal valor = Convert.ToDecimal(dataTable.Rows[dgvItensVenda.CurrentRow.Index]["Total"]);
-            valorTotal = (Convert.ToDecimal(valorTotal) - valor).ToString();
+            valorTotal = (total - valor).ToString();
+            total = total - valor;
 
             dgvItensVenda.Rows.Remove(dgvItensVenda.CurrentRow);
 
@@ -250,7 +254,7 @@ namespace Sistema_FotoStudio.View
             DataVenda = vendas.Data_venda;
 
             PassarValoresItemVenda(new VendaController().pesquisarItemVenda(Convert.ToInt32(CodigoVenda)));
-           // CalcularTotal();
+           
         }
 
         public void PassarValoresItemVenda(DataTable dataTable)
@@ -259,15 +263,6 @@ namespace Sistema_FotoStudio.View
             dgvItensVenda.DataSource = this.dataTable;
         }
 
-        public void CalcularTotal()
-        {
-            Decimal total = 0;
-
-            for(int i=0; i < dataTable.Rows.Count; i++)
-                total = total + Convert.ToDecimal(dataTable.Rows[i]["Total"]);
-
-            valorTotal = total.ToString();
-        }
 
         private void lblValorTotal_Click(object sender, EventArgs e)
         {
@@ -278,6 +273,7 @@ namespace Sistema_FotoStudio.View
         {
             Ativar();
             txtCodigoVenda.Enabled = false;
+            rbProduto.Checked = true;
         }
 
         protected void Inativar()
@@ -339,7 +335,7 @@ namespace Sistema_FotoStudio.View
             txtNomeProduto.Text = "";
             txtQuantidade.Text = "";
             mskValorunitario.Text = "";
-            rbProduto.Checked = false;
+            rbProduto.Checked = true;
             rbServico.Checked = false;
 
             dgvItensVenda.DataSource = null;

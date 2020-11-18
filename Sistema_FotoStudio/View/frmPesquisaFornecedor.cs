@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Sistema_FotoStudio.View
 {
@@ -92,24 +93,21 @@ namespace Sistema_FotoStudio.View
         public void ListarDados(DataTable tabela)
         {
 
-            DataRow[] pJuridica = null;
-            DataRow[] pFisica = null;
-            List<DataRow> listaPFisica = new List<DataRow>();
-            List<DataRow> listaPJuridica = new List<DataRow>();
-
-
+            DataTable pFisica = new DataTable();
+            DataTable pJuridica = new DataTable();
 
 
             for (int i = 0; i < tabela.Rows.Count; i++)
             {
-
                 if (tabela.Rows[i]["Tipo"].Equals("1"))
-                    listaPFisica.Add(tabela.Rows[i]);
+                    dataGridPFisica.DataSource = tabela.Rows[i];
                 else
-                    listaPJuridica.Add(tabela.Rows[i]);
+                    dataGridPJuridica.DataSource = tabela.Rows[i];
             }
 
-           
+
+            //dataGridPFisica.DataSource = pFisica;//Colocar dados no DataGrid
+           // dataGridPJuridica.DataSource = pJuridica;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

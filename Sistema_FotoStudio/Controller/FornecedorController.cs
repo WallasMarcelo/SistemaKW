@@ -100,8 +100,13 @@ namespace Sistema_FotoStudio.Controller
         {
             Fornecedor fornecedor = PesquisarPorCPF(CPF);//Realizar pesquisa pela cpf da linha escolhida do DAtaGrd
             cadastroCFornecedor.PassarValores(fornecedor);//Cahmar método passarValores do Forms
+        }
 
-
+        public int Inativar(String CPF)
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            return fornecedor.Inativar(CPF);
+            ;
         }
 
     }

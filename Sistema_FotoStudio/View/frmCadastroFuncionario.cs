@@ -352,5 +352,21 @@ namespace Sistema_FotoStudio.View
 
             funcionarioController.PesquisarPorNome(nome, this, this.principal);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Deseja realmente inativar esse cadastro?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+                FuncionarioController funcionarioController = new FuncionarioController();
+                int reultado = funcionarioController.Inativar(cpf);
+
+                if (reultado == 0)
+                    MessageBox.Show("Inativado com sucesso!");
+
+
+            }
+        }
     }
 }

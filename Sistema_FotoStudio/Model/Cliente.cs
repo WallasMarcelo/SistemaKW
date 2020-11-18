@@ -162,8 +162,6 @@ namespace Sistema_FotoStudio.Model
             acessoDados.AdicionarParametros("@CPF_Pessoa", CPF);
 
             return acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_Cliente_Funcionario_Fornecedor");
-
-           
         }
 
     }
