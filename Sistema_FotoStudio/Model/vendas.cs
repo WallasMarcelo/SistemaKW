@@ -134,6 +134,17 @@ namespace Sistema_FotoStudio.Model
 
         }
 
+        public DataTable PesquisarProdutoMaisVendidos()
+        {
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 5);
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_Vendas");
+
+            return dataTable;
+
+        }
+
         public DataTable PesquisarItemVenda(int CodigoVenda)
         {
             string scalar = "Select * from dbo. fc_busca_item_venda('" + CodigoVenda + "')";

@@ -71,7 +71,7 @@ namespace Sistema_FotoStudio.View
             }
 
             if (!CNPJ.Equals("")){
-                ListarDados(pesquisaFornecedor.pesquisaPorCNPJ(CNPJ));
+               ListarDados(pesquisaFornecedor.pesquisaPorCNPJ(CNPJ));
                 return;
             }
 
@@ -93,21 +93,8 @@ namespace Sistema_FotoStudio.View
         public void ListarDados(DataTable tabela)
         {
 
-            DataTable pFisica = new DataTable();
-            DataTable pJuridica = new DataTable();
-
-
-            for (int i = 0; i < tabela.Rows.Count; i++)
-            {
-                if (tabela.Rows[i]["Tipo"].Equals("1"))
-                    dataGridPFisica.DataSource = tabela.Rows[i];
-                else
-                    dataGridPJuridica.DataSource = tabela.Rows[i];
-            }
-
-
-            //dataGridPFisica.DataSource = pFisica;//Colocar dados no DataGrid
-           // dataGridPJuridica.DataSource = pJuridica;
+            dataGridFornecedor.DataSource = tabela;
+         
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -117,13 +104,11 @@ namespace Sistema_FotoStudio.View
             CNPJ = "";
             razaoSocial = "";
 
-            dataGridPFisica.DataSource = null;
-            dataGridPFisica.Rows.Clear();
-            dataGridPFisica.Refresh();
+            dataGridFornecedor.DataSource = null;
+            dataGridFornecedor.Rows.Clear();
+            dataGridFornecedor.Refresh();
 
-            dataGridPJuridica.DataSource = null;
-            dataGridPJuridica.Rows.Clear();
-            dataGridPJuridica.Refresh();
+
         }
     }
 }

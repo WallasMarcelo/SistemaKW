@@ -124,3 +124,4 @@ C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.Cor
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.csproj.CopyComplete
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.exe
 C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.pdb
+C:\Sistema_FotoStudio\Sistema_FotoStudio\obj\Debug\Sistema_FotoStudio.View.frmRelatorioPMaisVendidos.resources

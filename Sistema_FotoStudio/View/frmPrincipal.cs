@@ -155,9 +155,7 @@ namespace Sistema_FotoStudio.View
 
         private void btnAniversario_Click_1(object sender, EventArgs e)
         {
-            frmAniversariantes aniversariantes = new frmAniversariantes(aniversario);
-            aniversariantes.MdiParent = this;
-            aniversariantes.Show();
+            
         }
 
         private void clienteToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -179,6 +177,26 @@ namespace Sistema_FotoStudio.View
             frmRelatorioVenda relatorioVenda = new frmRelatorioVenda();
             relatorioVenda.MdiParent = this;
             relatorioVenda.Show();
+        }
+
+        private void produtosMaisVendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioPMaisVendidos relatorioPMaisVendidos = new frmRelatorioPMaisVendidos();
+            relatorioPMaisVendidos.MdiParent = this;
+            relatorioPMaisVendidos.Show();
+
+        }
+
+        private void aniversáriantesDoDiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAniversariantes aniversariantes = new frmAniversariantes(aniversario);
+            aniversariantes.MdiParent = this;
+            aniversariantes.Show();
+        }
+
+        private void outrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

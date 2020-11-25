@@ -99,6 +99,13 @@ namespace Sistema_FotoStudio.Controller
 
         }
 
+        public DataTable pesquisarProdutosMaisVendidos()
+        {
+            Vendas vendas = new Vendas();
+            return vendas.PesquisarProdutoMaisVendidos();
+
+        }
+
         public void PassarCodigo(String Codigo, frmVendas cadastroVenda)
         {
             Vendas vendas = pesquiarPorCodigo(Convert.ToInt32(Codigo));//Realizar pesquisa pela cpf da linha escolhida do DAtaGrd

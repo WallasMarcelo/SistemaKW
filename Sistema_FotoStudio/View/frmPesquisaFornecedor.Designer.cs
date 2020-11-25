@@ -42,19 +42,11 @@
             this.mskCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridPJuridica = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridPFisica = new System.Windows.Forms.DataGridView();
+            this.dataGridFornecedor = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.gbPFisica.SuspendLayout();
             this.gbPFJuridica.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPJuridica)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPFisica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -189,68 +181,23 @@
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // tabControl1
+            // dataGridFornecedor
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(6, 182);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(604, 335);
-            this.tabControl1.TabIndex = 12;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridPJuridica);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(596, 309);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pessoa Jurídica";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridPJuridica
-            // 
-            this.dataGridPJuridica.AllowUserToAddRows = false;
-            this.dataGridPJuridica.AllowUserToDeleteRows = false;
-            this.dataGridPJuridica.AllowUserToOrderColumns = true;
-            this.dataGridPJuridica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPJuridica.Location = new System.Drawing.Point(2, 7);
-            this.dataGridPJuridica.Name = "dataGridPJuridica";
-            this.dataGridPJuridica.ReadOnly = true;
-            this.dataGridPJuridica.Size = new System.Drawing.Size(594, 299);
-            this.dataGridPJuridica.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridPFisica);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(596, 309);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pessoa Física";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridPFisica
-            // 
-            this.dataGridPFisica.AllowUserToAddRows = false;
-            this.dataGridPFisica.AllowUserToDeleteRows = false;
-            this.dataGridPFisica.AllowUserToOrderColumns = true;
-            this.dataGridPFisica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPFisica.Location = new System.Drawing.Point(2, 6);
-            this.dataGridPFisica.Name = "dataGridPFisica";
-            this.dataGridPFisica.ReadOnly = true;
-            this.dataGridPFisica.Size = new System.Drawing.Size(594, 296);
-            this.dataGridPFisica.TabIndex = 1;
+            this.dataGridFornecedor.AllowUserToAddRows = false;
+            this.dataGridFornecedor.AllowUserToDeleteRows = false;
+            this.dataGridFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridFornecedor.Location = new System.Drawing.Point(6, 182);
+            this.dataGridFornecedor.Name = "dataGridFornecedor";
+            this.dataGridFornecedor.ReadOnly = true;
+            this.dataGridFornecedor.Size = new System.Drawing.Size(585, 222);
+            this.dataGridFornecedor.TabIndex = 2;
             // 
             // frmPesquisaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 529);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(615, 412);
+            this.Controls.Add(this.dataGridFornecedor);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -262,11 +209,7 @@
             this.gbPFisica.PerformLayout();
             this.gbPFJuridica.ResumeLayout(false);
             this.gbPFJuridica.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPJuridica)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPFisica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecedor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,11 +228,7 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.GroupBox gbPFisica;
         private System.Windows.Forms.GroupBox gbPFJuridica;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridPJuridica;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridPFisica;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.DataGridView dataGridFornecedor;
     }
 }

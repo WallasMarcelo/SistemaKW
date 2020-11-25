@@ -6,39 +6,42 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.24625cm</Width>
+              <Width>3.5892cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.9925cm</Width>
+              <Width>5.524cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.17229cm</Width>
+              <Width>5.01795cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.93959cm</Width>
+              <Width>3.5892cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.5892cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.85677cm</Height>
+              <Height>1.98906cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cod Produto</Value>
+                              <Value>cod Produto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -54,7 +57,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox6">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -68,7 +71,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -84,7 +87,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -98,7 +101,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -114,7 +117,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -128,7 +131,46 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox12">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Qunatidade vendida</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -145,25 +187,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.85677cm</Height>
+              <Height>1.98906cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Cod_Produto">
+                    <Textbox Name="cod_Produto">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Cod_Produto.Value</Value>
+                              <Value>=Fields!cod_Produto.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Cod_Produto</rd:DefaultName>
+                      <rd:DefaultName>cod_Produto</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -267,12 +309,43 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Column1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Column1.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Column1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -289,11 +362,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>1.01578cm</Top>
-        <Left>1.00224cm</Left>
-        <Height>3.71354cm</Height>
-        <Width>21.35063cm</Width>
+        <DataSetName>DataSetPMaisVendidos</DataSetName>
+        <Top>0.56599cm</Top>
+        <Left>0.94932cm</Left>
+        <Height>3.97813cm</Height>
+        <Width>21.30956cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -320,7 +393,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>RELATÓRIO DE CLIENTE</Value>
+                      <Value>PRODUTOS MAIS VENDIDOS</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -455,25 +528,28 @@
       </ConnectionProperties>
       <rd:DataSourceID>cfd30950-0dba-4a43-980b-fa3ca9c37893</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="sistemakwProdutosMaisVendidos">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>22e03d30-bdfe-4679-b172-49fda52468cc</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSetPMaisVendidos">
       <Query>
-        <DataSourceName>sistemakwDataSet1</DataSourceName>
+        <DataSourceName>sistemakwProdutosMaisVendidos</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Cod_Produto">
-          <DataField>Cod_Produto</DataField>
+        <Field Name="cod_Produto">
+          <DataField>cod_Produto</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Descricao">
           <DataField>Descricao</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Quantidade">
-          <DataField>Quantidade</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Marca">
           <DataField>Marca</DataField>
@@ -483,22 +559,18 @@
           <DataField>Lote</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Situacao">
-          <DataField>Situacao</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cod_fornecedor">
-          <DataField>cod_fornecedor</DataField>
+        <Field Name="Column1">
+          <DataField>Column1</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>sistemakwDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Sistema_FotoStudio\Sistema_FotoStudio\sistemakwDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>tbl_Produto</rd:TableName>
+        <rd:DataSetName>sistemakwProdutosMaisVendidos</rd:DataSetName>
+        <rd:SchemaPath>C:\Sistema_FotoStudio\Sistema_FotoStudio\sistemakwProdutosMaisVendidos.xsd</rd:SchemaPath>
+        <rd:TableName>tbl_ProdutosMaisVendidos</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tbl_ProdutoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>tbl_ProdutosMaisVendidosTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

@@ -112,6 +112,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sistemakwDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="sistemakwProdutosMaisVendidos.cs">
+      <DependentUpon>sistemakwProdutosMaisVendidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemakwProdutosMaisVendidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemakwProdutosMaisVendidos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\frmAniversariantes.cs">
       <SubType>Form</SubType>
@@ -235,6 +243,12 @@
     <Compile Include="View\frmRelatorioCliente.Designer.cs">
       <DependentUpon>frmRelatorioCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmRelatorioPMaisVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRelatorioPMaisVendidos.Designer.cs">
+      <DependentUpon>frmRelatorioPMaisVendidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmRelatorioServiço.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +371,9 @@
     <EmbeddedResource Include="View\frmRelatorioCliente.resx">
       <DependentUpon>frmRelatorioCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmRelatorioPMaisVendidos.resx">
+      <DependentUpon>frmRelatorioPMaisVendidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmRelatorioServiço.resx">
       <DependentUpon>frmRelatorioServiço.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +440,17 @@
     </None>
     <None Include="sistemakwDataSet1.xss">
       <DependentUpon>sistemakwDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sistemakwProdutosMaisVendidos.xsc">
+      <DependentUpon>sistemakwProdutosMaisVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="sistemakwProdutosMaisVendidos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemakwProdutosMaisVendidos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemakwProdutosMaisVendidos.xss">
+      <DependentUpon>sistemakwProdutosMaisVendidos.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

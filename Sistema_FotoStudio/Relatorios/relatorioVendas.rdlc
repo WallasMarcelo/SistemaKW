@@ -484,8 +484,8 @@
         <DataSetName>DataSetVendas</DataSetName>
         <Top>0.65828cm</Top>
         <Left>1.0521cm</Left>
-        <Height>3.87229cm</Height>
-        <Width>22.27803cm</Width>
+        <Height>3.8723cm</Height>
+        <Width>22.27804cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -512,7 +512,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>RELATÓRIO DE SERVIÇO</Value>
+                      <Value>RELATÓRIO DE VENDAS</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
