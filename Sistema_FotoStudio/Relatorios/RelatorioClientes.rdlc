@@ -6,170 +6,33 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.79753cm</Width>
+              <Width>3.80528cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.73233cm</Width>
+              <Width>5.9084cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.22628cm</Width>
+              <Width>4.89007cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79753cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.79753cm</Width>
+              <Width>4.7608cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.06302cm</Height>
+              <Height>0.89104cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox6">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Código Produto</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox5">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Descricao</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Marca</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox9">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Lote</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox12">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Quantidade Vendida</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>Código Cliente</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -178,21 +41,121 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BackgroundColor>Brown</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox8">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Cliente</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Brown</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>CPF</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Brown</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Data Nascimento</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Brown</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -204,25 +167,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.95719cm</Height>
+              <Height>1.71125cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cod_Produto">
+                    <Textbox Name="cod_cliente">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cod_Produto.Value</Value>
+                              <Value>=Fields!cod_cliente.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cod_Produto</rd:DefaultName>
+                      <rd:DefaultName>cod_cliente</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -238,21 +201,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Descricao">
+                    <Textbox Name="Cliente">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Descricao.Value</Value>
+                              <Value>=Fields!Cliente.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Descricao</rd:DefaultName>
+                      <rd:DefaultName>Cliente</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -268,21 +231,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Marca">
+                    <Textbox Name="cpf_pessoa">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Marca.Value</Value>
+                              <Value>=Fields!cpf_pessoa.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Marca</rd:DefaultName>
+                      <rd:DefaultName>cpf_pessoa</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -298,51 +261,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Lote">
+                    <Textbox Name="Data_Nasc">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Lote.Value</Value>
+                              <Value>=Fields!Data_Nasc.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Lote</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Column1">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!Column1.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Column1</rd:DefaultName>
+                      <rd:DefaultName>Data_Nasc</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -366,7 +299,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -379,11 +311,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetPMaisVendidos</DataSetName>
-        <Top>0.56599cm</Top>
-        <Left>0.94932cm</Left>
-        <Height>2.0202cm</Height>
-        <Width>17.35118cm</Width>
+        <DataSetName>DataSetCliente</DataSetName>
+        <Top>1.25391cm</Top>
+        <Left>1.18745cm</Left>
+        <Height>2.60229cm</Height>
+        <Width>19.36455cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -391,13 +323,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>1.51819in</Height>
     <Style />
   </Body>
-  <Width>7.43509in</Width>
+  <Width>9.18509in</Width>
   <Page>
     <PageHeader>
-      <Height>3.90453cm</Height>
+      <Height>3.50542cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -410,7 +342,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>PRODUTOS MAIS VENDIDOS</Value>
+                      <Value>RELATÓRIO DE CLIENTE</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -424,7 +356,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>0.80448cm</Top>
-              <Left>0.94932cm</Left>
+              <Left>2.54805cm</Left>
               <Height>0.89104cm</Height>
               <Width>15.75245cm</Width>
               <Style>
@@ -454,7 +386,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
-              <Top>2.66729cm</Top>
+              <Top>2.13812cm</Top>
               <Left>14.18654cm</Left>
               <Height>0.6cm</Height>
               <Width>4.11396cm</Width>
@@ -473,8 +405,8 @@
               <Source>Embedded</Source>
               <Value>TAINARAFOTOGRAFIA</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.55245cm</Top>
-              <Left>0.36724cm</Left>
+              <Top>0.5399cm</Top>
+              <Left>0.58944cm</Left>
               <Height>1.5cm</Height>
               <Width>1.5cm</Width>
               <ZIndex>2</ZIndex>
@@ -486,8 +418,10 @@
             </Image>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Height>3.90453cm</Height>
-          <Width>18.75284cm</Width>
+          <Top>0.15763cm</Top>
+          <Left>2.34156cm</Left>
+          <Height>3.19016cm</Height>
+          <Width>18.64701cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -502,10 +436,24 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.76104cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Image Name="Logo2">
+          <Source>Embedded</Source>
+          <Value>TAINARAFOTOGRAFIA</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.70542cm</Top>
+          <Left>2.80954cm</Left>
+          <Height>1.12916cm</Height>
+          <Width>0.99729cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
         <Textbox Name="Textbox13">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -521,10 +469,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>0.79417cm</Top>
-          <Left>14.18654cm</Left>
+          <Top>0.70542cm</Top>
+          <Left>16.40664cm</Left>
           <Height>0.70583cm</Height>
           <Width>4.11396cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -535,21 +484,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Logo2">
-          <Source>Embedded</Source>
-          <Value>TAINARAFOTOGRAFIA</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>1.24396cm</Top>
-          <Left>0.36724cm</Left>
-          <Height>1.05021cm</Height>
-          <Width>0.91792cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -568,56 +502,45 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="sistemakwDataSet1">
+    <DataSource Name="DataSetCliente">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>cfd30950-0dba-4a43-980b-fa3ca9c37893</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="sistemakwProdutosMaisVendidos">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>22e03d30-bdfe-4679-b172-49fda52468cc</rd:DataSourceID>
+      <rd:DataSourceID>3940c123-53a2-4559-8eb8-8b46b91cf46e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetPMaisVendidos">
+    <DataSet Name="DataSetCliente">
       <Query>
-        <DataSourceName>sistemakwProdutosMaisVendidos</DataSourceName>
+        <DataSourceName>DataSetCliente</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="cod_Produto">
-          <DataField>cod_Produto</DataField>
+        <Field Name="cod_cliente">
+          <DataField>cod_cliente</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Descricao">
-          <DataField>Descricao</DataField>
+        <Field Name="cpf_pessoa">
+          <DataField>cpf_pessoa</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Marca">
-          <DataField>Marca</DataField>
+        <Field Name="Cliente">
+          <DataField>Cliente</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Lote">
-          <DataField>Lote</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Column1">
-          <DataField>Column1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Data_Nasc">
+          <DataField>Data_Nasc</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>sistemakwProdutosMaisVendidos</rd:DataSetName>
-        <rd:SchemaPath>C:\Sistema_FotoStudio\Sistema_FotoStudio\sistemakwProdutosMaisVendidos.xsd</rd:SchemaPath>
-        <rd:TableName>tbl_ProdutosMaisVendidos</rd:TableName>
+        <rd:DataSetName>DataSetCliente</rd:DataSetName>
+        <rd:SchemaPath>C:\Sistema_FotoStudio\Sistema_FotoStudio\DataSetCliente.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tbl_ProdutosMaisVendidosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -634,5 +557,5 @@ ZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHht
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>d969175a-a0b5-49f8-9832-13bb4e35e2d7</rd:ReportID>
+  <rd:ReportID>d07595f9-e791-4ab2-87ee-531c2edf9288</rd:ReportID>
 </Report>

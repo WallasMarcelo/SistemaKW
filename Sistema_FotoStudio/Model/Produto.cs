@@ -22,12 +22,21 @@ namespace Sistema_FotoStudio.Model
 
         public int cod_fornecedor { get; set; }
 
-        public int cod_produto { get; set; }
+        public String cod_produto { get; set; }
+
+        public string nome_fornecedor { get; set; }
+      
+
+
 
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
-        public int InserirProduto(Produto produto)
+        public int ManterProduto(Produto produto)
         {
-            acessoDados.AdicionarParametros("@Funcao", "1");
+            if (produto.cod_produto.Equals(""))
+                acessoDados.AdicionarParametros("@Funcao", "1");
+            else
+                acessoDados.AdicionarParametros("@Funcao", "2");
+            acessoDados.AdicionarParametros("@Cod_Produto", produto.cod_produto);
             acessoDados.AdicionarParametros("@Descricao", produto.descricao);
             acessoDados.AdicionarParametros("@Quantidade", produto.quantidade);
             acessoDados.AdicionarParametros("@Marca", produto.marca);
@@ -38,61 +47,85 @@ namespace Sistema_FotoStudio.Model
             return acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_produto");
         }
 
-        public void alterarProduto(Produto produto)
-        {
-            acessoDados.LimparParametros();
-            acessoDados.AdicionarParametros("@Funcao", 2);
-            acessoDados.AdicionarParametros("@Descricao", produto.descricao);
-            acessoDados.AdicionarParametros("@Quantidade", produto.quantidade);
-            acessoDados.AdicionarParametros("@Marca", produto.marca);
-            acessoDados.AdicionarParametros("@Lote", produto.lote);
-            acessoDados.AdicionarParametros("@Situacao", produto.situacao);
-            acessoDados.AdicionarParametros("@Cod_Fornecedor", produto.cod_fornecedor);
+       
 
-            acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_produto");
-
-        }
-
-        public void inativarProduto(Produto produto)
+        public int inativarProduto(int cod)
         {
             acessoDados.LimparParametros();
             acessoDados.AdicionarParametros("@Funcao", 3);
-            acessoDados.AdicionarParametros("@Cod_produto", produto.cod_produto);
+            acessoDados.AdicionarParametros("@Cod_produto", cod);
 
-            acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_produto");
+           return acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "sp_produto");
         }
 
-        public Produto PesquisarPorCodigo(int COD)
+        public Produto PesquisarPorCodigo(string COD)
         {
             acessoDados.LimparParametros();
             acessoDados.AdicionarParametros("@Funcao", 1);
             acessoDados.AdicionarParametros("@Cod_Produto", COD);
+            
 
             DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_produto");
 
             Produto produto = new Produto();
 
-            produto.cod_fornecedor = Convert.ToInt32(dataTable.Rows[0]["cod_produto"]);
+            produto.cod_produto = Convert.ToString(dataTable.Rows[0]["Codigo"]);
             produto.descricao = Convert.ToString(dataTable.Rows[0]["Descricao"]);
             produto.quantidade = Convert.ToInt32(dataTable.Rows[0]["Quantidade"]);
             produto.marca = Convert.ToString(dataTable.Rows[0]["Marca"]);
             produto.lote = Convert.ToString(dataTable.Rows[0]["Lote"]);
             produto.situacao = Convert.ToInt32(dataTable.Rows[0]["Situacao"]);
+            produto.nome_fornecedor = Convert.ToString(dataTable.Rows[0]["NomeFantasia"]);
 
             return produto;
         }
 
-        public DataTable PesquisarPorDescricao(Produto produto)
+       
+
+        public DataTable buscaFornecedorCmb()
         {
-            List<Produto> ListaProduto = new List<Produto>();
+            string scalar = "Select * from dbo.fc_mostra_fornecedor()";
+            acessoDados.LimparParametros();
 
+            return acessoDados.ExecutarConsulta(CommandType.Text, scalar);
+        }
 
-            acessoDados.AdicionarParametros("@Funcao", 2);
-            acessoDados.AdicionarParametros("@Descricao", produto.descricao);
+        public DataTable PesquisarPorCod(string cod)
+        {
+
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 1);
+            acessoDados.AdicionarParametros("@Cod_Produto", cod);
 
             DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_produto");
 
             return dataTable;
+
         }
+        public DataTable PesquisarPorDescricao(string descricao)
+        {
+
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 2);
+            acessoDados.AdicionarParametros("@Descricao", descricao);
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_produto");
+
+            return dataTable;
+
+        }
+
+        public DataTable PesquisarTodos()
+        {
+
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@Funcao", 3);
+            
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "sp_pesquisar_produto");
+
+            return dataTable;
+
+        }
+
     }
 }

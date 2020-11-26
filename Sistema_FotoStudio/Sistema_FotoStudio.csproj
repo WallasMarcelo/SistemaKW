@@ -80,6 +80,8 @@
     <Compile Include="Controller\pesquisaControllerVenda.cs" />
     <Compile Include="Controller\pesquisaFuncionarioController.cs" />
     <Compile Include="Controller\pesquisaUsuarioController.cs" />
+    <Compile Include="Controller\ProdutoController.cs" />
+    <Compile Include="Controller\ServicoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="Controller\VendaController.cs" />
     <Compile Include="Criptografia\Hash.cs" />
@@ -204,15 +206,11 @@
     <Compile Include="View\frmPesquisarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmPesquisarProduto.Designer.cs">
-      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\frmPesquisarProduto.Designer.cs" />
     <Compile Include="View\frmPesquisaServico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmPesquisaServico.Designer.cs">
-      <DependentUpon>frmPesquisaServico.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\frmPesquisaServico.Designer.cs" />
     <Compile Include="View\frmPesquisaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,10 +294,12 @@
       <DependentUpon>pesquisaResultadoVendas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Relatorios\RelatorioCliente.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioClientes.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioProdutosMaisVendidos.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioServico.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RelatorioServicos.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioVendas.rdlc" />
     <EmbeddedResource Include="View\frmAniversariantes.resx">
       <DependentUpon>frmAniversariantes.cs</DependentUpon>
@@ -350,12 +350,8 @@
     <EmbeddedResource Include="View\frmPesquisarDependentes.resx">
       <DependentUpon>frmPesquisarDependentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmPesquisarProduto.resx">
-      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmPesquisaServico.resx">
-      <DependentUpon>frmPesquisaServico.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPesquisarProduto.resx" />
+    <EmbeddedResource Include="View\frmPesquisaServico.resx" />
     <EmbeddedResource Include="View\frmPesquisaUsuario.resx">
       <DependentUpon>frmPesquisaUsuario.cs</DependentUpon>
     </EmbeddedResource>

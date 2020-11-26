@@ -54,6 +54,8 @@
             this.produtosMaisVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aniversáriantesDoDiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dependentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dependentesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +77,7 @@
             // 
             this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
+            this.dependentesToolStripMenuItem,
             this.produtoToolStripMenuItem,
             this.serviçosToolStripMenuItem1,
             this.fornecedorToolStripMenuItem,
@@ -104,6 +107,7 @@
             this.serviçosToolStripMenuItem1.Name = "serviçosToolStripMenuItem1";
             this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.serviçosToolStripMenuItem1.Text = "Serviços";
+            this.serviçosToolStripMenuItem1.Click += new System.EventHandler(this.serviçosToolStripMenuItem1_Click);
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -130,6 +134,7 @@
             // 
             this.pesquisaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pesquisaClientesToolStripMenuItem,
+            this.dependentesToolStripMenuItem1,
             this.pesquisaProdutosToolStripMenuItem,
             this.pesquisaServiçosToolStripMenuItem,
             this.pesquisaFuncionarioToolStripMenuItem,
@@ -259,6 +264,20 @@
             this.aniversáriantesDoDiaToolStripMenuItem.Text = "Aniversáriantes do dia";
             this.aniversáriantesDoDiaToolStripMenuItem.Click += new System.EventHandler(this.aniversáriantesDoDiaToolStripMenuItem_Click);
             // 
+            // dependentesToolStripMenuItem
+            // 
+            this.dependentesToolStripMenuItem.Name = "dependentesToolStripMenuItem";
+            this.dependentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dependentesToolStripMenuItem.Text = "Dependentes";
+            this.dependentesToolStripMenuItem.Click += new System.EventHandler(this.dependentesToolStripMenuItem_Click);
+            // 
+            // dependentesToolStripMenuItem1
+            // 
+            this.dependentesToolStripMenuItem1.Name = "dependentesToolStripMenuItem1";
+            this.dependentesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.dependentesToolStripMenuItem1.Text = "Dependentes";
+            this.dependentesToolStripMenuItem1.Click += new System.EventHandler(this.dependentesToolStripMenuItem1_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +325,7 @@
         private System.Windows.Forms.ToolStripMenuItem produtosMaisVendidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aniversáriantesDoDiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dependentesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dependentesToolStripMenuItem1;
     }
 }

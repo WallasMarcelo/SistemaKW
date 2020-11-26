@@ -51,9 +51,9 @@ namespace Sistema_FotoStudio.View
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroProduto tela = new frmCadastroProduto();
-            tela.MdiParent = this;
-            tela.Show();
+            frmCadastroProduto produto = new frmCadastroProduto();
+            produto.MdiParent = this;
+            produto.Show();
         }
 
         private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -161,6 +161,7 @@ namespace Sistema_FotoStudio.View
         private void clienteToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmRelatorioCliente relatorioCliente = new frmRelatorioCliente();
+            relatorioCliente = new frmRelatorioCliente();
             relatorioCliente.MdiParent = this;
             relatorioCliente.Show();
         }
@@ -197,6 +198,27 @@ namespace Sistema_FotoStudio.View
         private void outrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dependentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDependentes frmDependentes = new frmDependentes();
+            frmDependentes.MdiParent = this;
+            frmDependentes.Show();
+        }
+
+        private void dependentesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPesquisarDependentes pesquisarDependentes = new frmPesquisarDependentes();
+            pesquisarDependentes.MdiParent = this;
+            pesquisarDependentes.Show();
+        }
+
+        private void serviçosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCadastroServico servico = new frmCadastroServico();
+            servico.MdiParent = this;
+            servico.Show();
         }
     }
 }

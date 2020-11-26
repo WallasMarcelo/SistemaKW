@@ -22,7 +22,7 @@ namespace Sistema_FotoStudio.View
         private void frmRelatorioServiço_Load(object sender, EventArgs e)
         {
             Servico servico = new Servico();
-            DataTable dataTable = servico.PesquisarTodosRelatorio();
+            DataTable dataTable = servico.PesquisarTodos();
             reportViewer1.LocalReport.DataSources.Clear();
 
             ReportDataSource rds = new ReportDataSource("DataSetServico", dataTable);

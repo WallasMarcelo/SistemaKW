@@ -31,26 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisaServico));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTipoServico = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvPesquisaServico = new System.Windows.Forms.DataGridView();
-            this.dtCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridPesquisaServico = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisaServico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPesquisaServico)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnLimpar);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnPesquisar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTipoServico);
             this.groupBox1.Controls.Add(this.label1);
@@ -58,7 +54,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(647, 100);
+            this.groupBox1.Size = new System.Drawing.Size(537, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados";
@@ -69,23 +65,25 @@
             this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.Location = new System.Drawing.Point(517, 36);
+            this.btnLimpar.Location = new System.Drawing.Point(468, 36);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(72, 36);
+            this.btnLimpar.Size = new System.Drawing.Size(41, 36);
             this.btnLimpar.TabIndex = 4;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(400, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 36);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.BackgroundImage")));
+            this.btnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Location = new System.Drawing.Point(400, 36);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(49, 36);
+            this.btnPesquisar.TabIndex = 3;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // label2
             // 
@@ -122,59 +120,30 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvPesquisaServico);
+            this.panel1.Controls.Add(this.gridPesquisaServico);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(647, 239);
+            this.panel1.Size = new System.Drawing.Size(537, 239);
             this.panel1.TabIndex = 1;
             // 
-            // dgvPesquisaServico
+            // gridPesquisaServico
             // 
-            this.dgvPesquisaServico.AllowUserToAddRows = false;
-            this.dgvPesquisaServico.AllowUserToDeleteRows = false;
-            this.dgvPesquisaServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPesquisaServico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtCodigo,
-            this.dtServico,
-            this.dtDescricao,
-            this.dtValor});
-            this.dgvPesquisaServico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPesquisaServico.Location = new System.Drawing.Point(0, 0);
-            this.dgvPesquisaServico.Name = "dgvPesquisaServico";
-            this.dgvPesquisaServico.ReadOnly = true;
-            this.dgvPesquisaServico.Size = new System.Drawing.Size(647, 239);
-            this.dgvPesquisaServico.TabIndex = 5;
-            // 
-            // dtCodigo
-            // 
-            this.dtCodigo.HeaderText = "código";
-            this.dtCodigo.Name = "dtCodigo";
-            this.dtCodigo.ReadOnly = true;
-            // 
-            // dtServico
-            // 
-            this.dtServico.HeaderText = "Tipo de serviço";
-            this.dtServico.Name = "dtServico";
-            this.dtServico.ReadOnly = true;
-            // 
-            // dtDescricao
-            // 
-            this.dtDescricao.HeaderText = "Descrição";
-            this.dtDescricao.Name = "dtDescricao";
-            this.dtDescricao.ReadOnly = true;
-            // 
-            // dtValor
-            // 
-            this.dtValor.HeaderText = "Valor";
-            this.dtValor.Name = "dtValor";
-            this.dtValor.ReadOnly = true;
+            this.gridPesquisaServico.AllowUserToAddRows = false;
+            this.gridPesquisaServico.AllowUserToDeleteRows = false;
+            this.gridPesquisaServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPesquisaServico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridPesquisaServico.Location = new System.Drawing.Point(0, 0);
+            this.gridPesquisaServico.Name = "gridPesquisaServico";
+            this.gridPesquisaServico.ReadOnly = true;
+            this.gridPesquisaServico.Size = new System.Drawing.Size(537, 239);
+            this.gridPesquisaServico.TabIndex = 5;
             // 
             // frmPesquisaServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 339);
+            this.ClientSize = new System.Drawing.Size(537, 339);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -185,7 +154,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPesquisaServico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPesquisaServico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,14 +165,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTipoServico;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvPesquisaServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtDescricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtValor;
+        private System.Windows.Forms.DataGridView gridPesquisaServico;
     }
 }
